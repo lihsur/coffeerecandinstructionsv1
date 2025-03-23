@@ -18,6 +18,8 @@ const coffeeRecipes = [
       extraShot: false
     },
     description: "A strong and bold espresso shot that jumpstarts your day.",
+    whyRecommended: "Because you selected an energetic or focused mood and prefer bold or balanced flavors.",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80",
     ingredients: ["Fresh coffee beans - 18g", "Water - 30ml"],
     equipment: ["Gaggia Classic GT", "Tamper", "Measuring Scoop"],
     steps: [
@@ -38,6 +40,8 @@ const coffeeRecipes = [
       extraShot: false
     },
     description: "A mellow, sweet latte perfect for a relaxed mood.",
+    whyRecommended: "Because you're feeling relaxed and prefer a sweeter coffee experience.",
+    image: "https://images.unsplash.com/photo-1511025991315-2ede9f2ad2c2?auto=format&fit=crop&w=500&q=80",
     ingredients: [
       "Fresh coffee beans - 18g",
       "Water - 30ml",
@@ -61,6 +65,8 @@ const coffeeRecipes = [
       extraShot: false
     },
     description: "A balanced cappuccino made with decaffeinated beans.",
+    whyRecommended: "Because you selected evening time, a balanced taste, and prefer decaf.",
+    image: "https://images.unsplash.com/photo-1551942589-cc0ffa0df7c2?auto=format&fit=crop&w=500&q=80",
     ingredients: [
       "Decaf coffee beans - 18g",
       "Water - 30ml",
@@ -84,6 +90,8 @@ const coffeeRecipes = [
       extraShot: true
     },
     description: "A rich mocha with an extra shot for that intense caffeine kick.",
+    whyRecommended: "Because you like sweet or bold flavors, plus you asked for an extra shot.",
+    image: "https://images.unsplash.com/photo-1536521601-998b7fa9c33d?auto=format&fit=crop&w=500&q=80",
     ingredients: [
       "Coffee beans - 18g + 9g extra shot",
       "Water - 45ml total",
@@ -155,9 +163,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Populate the page with the best match
     if (bestMatch) {
+      // Title & Description
       document.getElementById("coffee-title").textContent = bestMatch.name;
-      document.getElementById("coffee-description").textContent =
-        bestMatch.description;
+      document.getElementById("coffee-description").textContent = bestMatch.description;
+
+      // Why recommended
+      document.getElementById("why-recommended").textContent = bestMatch.whyRecommended;
+
+      // Coffee image
+      const coffeeImage = document.getElementById("coffee-image");
+      coffeeImage.src = bestMatch.image;
+      coffeeImage.alt = bestMatch.name;
 
       // Ingredients
       const ingredientsList = document.getElementById("ingredients-list");
@@ -187,8 +203,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
       // Serving Suggestions
-      document.getElementById("serving-suggestions").textContent =
-        bestMatch.serving;
+      document.getElementById("serving-suggestions").textContent = bestMatch.serving;
     }
   }
 });
