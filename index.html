@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoffeeGenie | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation (Optional) -->
+  <nav class="navbar">
+    <div class="nav-brand">CoffeeGenie</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Brew your happiness with the perfect coffee</h1>
+  </header>
+
+  <!-- Preferences Form Section -->
+  <section class="preferences">
+    <h2>Select Your Preferences</h2>
+    <form id="coffeeForm">
+      <!-- Mood -->
+      <div class="form-group">
+        <label for="mood">Mood</label>
+        <select id="mood" name="mood">
+          <option value="relaxed">Relaxed</option>
+          <option value="energetic">Energetic</option>
+          <option value="focused">Focused</option>
+        </select>
+      </div>
+
+      <!-- Preferred Taste -->
+      <div class="form-group">
+        <label for="taste">Preferred Taste</label>
+        <select id="taste" name="taste">
+          <option value="sweet">Sweet</option>
+          <option value="balanced">Balanced</option>
+          <option value="bold">Bold</option>
+        </select>
+      </div>
+
+      <!-- Time of Day -->
+      <div class="form-group">
+        <label for="timeOfDay">Time of Day</label>
+        <select id="timeOfDay" name="timeOfDay">
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
+        </select>
+      </div>
+
+      <!-- Additional Options -->
+      <div class="form-group">
+        <label>Additional Options</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="decaf" name="decaf" />
+          <label for="decaf">Decaf</label>
+
+          <input type="checkbox" id="extraShot" name="extraShot" />
+          <label for="extraShot">Extra Shot</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Proceed to Recommendations</button>
+    </form>
+  </section>
+
+  <!-- Footer (Optional) -->
+  <footer class="footer">
+    <p>© 2023 CoffeeGenie. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
