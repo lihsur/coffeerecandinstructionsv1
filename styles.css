@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4e342e; /* A deeper coffee color */
+  background-color: #4e342e; /* Deeper coffee color */
   padding: 0.75rem 1rem;
 }
 .nav-brand {
@@ -34,27 +34,28 @@ body {
 
 /* ========== Hero Section (Homepage) ========== */
 .hero {
-  /* Coffee image background */
-  background: url('https://images.unsplash.com/photo-1413745094920-4b63e0443c2d?auto=format&fit=crop&w=1600&q=80')
-    center/cover no-repeat;
-  color: #fff; /* Base color for other hero elements (if any) */
+  /* Uses a local image file named coffee-beans.jpg in the same folder */
+  background: url('coffee-beans.jpg') center/cover no-repeat;
+  color: #fff; /* Default text color in hero is white */
   text-align: center;
   padding: 5rem 1rem;
 }
+
+/* Make the main title (h1) explicitly white */
 .hero h1 {
-  color: #000; /* Black text for heading */
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  color: #fff; /* Ensures the main title is white */
 }
+
 .hero p {
-  color: #000; /* Black text for paragraph */
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* ========== Preferences Form ========== */
+/* ========== Preferences Form (Homepage) ========== */
 .preferences {
   max-width: 600px;
   margin: 2rem auto;
@@ -72,7 +73,8 @@ label {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
-select, input[type="checkbox"] {
+select,
+input[type="checkbox"] {
   margin-right: 0.5rem;
   font-size: 1rem;
   padding: 0.25rem;
@@ -83,7 +85,7 @@ select, input[type="checkbox"] {
   align-items: center;
 }
 .btn {
-  background-color: #6d4c41; /* A warm coffee shade */
+  background-color: #6d4c41; /* Warm coffee shade */
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -117,7 +119,7 @@ select, input[type="checkbox"] {
 .coffee-img {
   max-width: 300px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 1.5rem;
 }
 
@@ -132,7 +134,8 @@ h3 {
   margin-bottom: 0.75rem;
   color: #4e342e;
 }
-ul, ol {
+ul,
+ol {
   margin-left: 1.25rem;
   margin-bottom: 1rem;
 }
